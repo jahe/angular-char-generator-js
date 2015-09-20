@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="charGenerator">
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</head>
+
+<body>
+    <section id="generator" ng-controller="CharGeneratorController as generator">
+        <section id="head-row">
+            <div id="prev-head">
+                <button id="prev-head-btn" ng-click="generator.prev('head')">
+                    <i class="fa fa-arrow-left"></i>
+                </button>
+            </div>
+            <div id="head">
+                <img src="{{generator.head.pics[generator.head.active]}}">
+            </div>
+            <div id="next-head">
+                <button id="next-head-btn" ng-click="generator.next('head')">
+                    <i class="fa fa-arrow-right"></i>
+                </button>
+            </div>
+        </section>
+        <section id="body-row">
+            <div id="prev-body">
+                <button id="prev-body-btn" ng-click="generator.prev('body')">
+                    <i class="fa fa-arrow-left"></i>
+                </button>
+            </div>
+            <div id="body">
+                <img src="{{generator.body.pics[generator.body.active]}}">
+            </div>
+            <div id="next-body">
+                <button id="next-body-btn" ng-click="generator.next('body')">
+                    <i class="fa fa-arrow-right"></i>
+                </button>
+            </div>
+        </section>
+        <section id="legs-row">
+            <div id="prev-legs">
+                <button id="prev-legs-btn" ng-click="generator.prev('legs')">
+                    <i class="fa fa-arrow-left"></i>
+                </button>
+            </div>
+            <div id="legs">
+                <img src="{{generator.legs.pics[generator.legs.active]}}">
+            </div>
+            <div id="next-legs">
+                <button id="next-legs-btn" ng-click="generator.next('legs')">
+                    <i class="fa fa-arrow-right"></i>
+                </button>
+            </div>
+        </section>
+    </section>
+</body>
+
+</html>

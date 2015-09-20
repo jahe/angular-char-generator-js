@@ -1,0 +1,21 @@
+#generator {
+	display: table;
+	width: 400px;
+	height: 300px;
+	text-align: center;
+}
+
+#generator>* {
+	display: table-row;
+}
+
+#generator>*>* {
+	display: table-cell;
+	width: 100px;
+	vertical-align: middle;
+}
+
+#generator img {
+	width: 200px;
+	height: 100px;
+}
